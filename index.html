@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFOTEC - Informática para Internet</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="assets/infologo.svg" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <img src="assets/infotec.svg" alt="imagem da logo" class="logoL">
+    <button id="menu-toggle" class="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#curso">Curso</a></li>
+        <li><a href="#exposicoes">Exposições</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </button>
+      <button id="login-btn" class="btn-login-trigger">
+        <i class="fas fa-user"></i> Entrar
+      </button>
+    </div>
+  </header>
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Acessar o INFOTEC</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Nome:</label>
+          <input type="text" id="username" required placeholder="Digite seu nome">
+        </div>
+        <div class="form-group">
+          <label for="user-role">Quem é você?</label>
+          <select id="user-role" required>
+            <option value="" disabled selected>Selecione seu perfil</option>
+            <option value="Estudante">Estudante</option>
+            <option value="Professor">Professor(a)</option>
+            <option value="Cidadão">Cidadão / Visitante</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">Entrar</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="dragon-assistant" class="dragon-container">
+    <div class="dragon-bubble" id="dragon-bubble">
+      Olá! Faça login para conversarmos! 🐉
+    </div>
+    <div class="dragon-avatar">
+      <i class="fas fa-dragon"></i>
+    </div>
+    <div class="dragon-help-menu" id="dragon-help-menu">
+      <button onclick="askDragon('curso')">Dúvida sobre o Curso?</button>
+      <button onclick="askDragon('exposicoes')">O que são as Exposições?</button>
+    </div>
+  </div>
+
+  <main>
+    <section id="fetec" class="section-fetec">
+      <div class="container">
+        <img src="assets/fetec.svg" alt="logo fetec" class="logoL">
+        <p>A FETEC é um evento promovido pela Etec Darcy Pereira de Moraes (Itapetininga - SP) e conta com a
+          participação de Professores e Alunos para exposição de projetos, experimentos e apresentações.<br>
+          Este site foi desenvolvido pelos alunos do 1º, 2º e 3º ano do curso Ensino Médio integrado ao Técnico em <i>Informática
+          para Internet</i>, de modo a proporcionar ao público uma "exposição virtual" dos Projetos e Jogos
+          desenvolvidos no decorrer do ano.</p>
+        <br>
+        <a href="https://fetecdarcy.github.io/landingpage-fetec2025/" class="btn">Saiba mais</a>
+      </div>
+    </section>
+
+    <section id="curso" class="section-curso">
+      <div class="container">
+        <h1>Informática para Internet</h1><br>
+        <p>O curso <i>Informática para Internet</i> prepara o aluno para o desenvolvimento de websites, aplicativos
+          e-commerce e serviços relacionados, além de fornecer uma base sólida em tecnologias de programação, banco de
+          dados e desenvolvimento web. O curso promove habilidades essenciais para a sociedade atual. Vem ser Etec!</p>
+      </div>
+      <div class="video-frame">
+        <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/DdQQlsltrQs" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+      </div>  
+    </section>
+
+    <section id="exposicoes" class="section-exposicoes">
+      <h2>Exposições</h2><br>
+      <div class="grid-container">
+        <div class="expo-item">
+          <img src="assets/scratch.jpg" alt="Scratch">
+          <h3>Scratch</h3>
+          <p>Jogos diversos desenvolvidos no Scratch</p>
+          <a href="https://tavernf.github.io/scratchFetec/?classId=c6af9f25-f24a-40c1-a965-c255e58e8c64&assignmentId=8038706a-d8e9-40b2-9cb1-9293a20190b9&submissionId=cee6d9f2-fc96-513a-1a38-16f6d33ec50d#redes" target="_blank"><button>Saiba mais</button></a>
+        </div>
+        <div class="expo-item">
+          <img src="assets/jogo2.png" alt="Qual é a Música?">
+          <h3>Qual é a Música?</h3>
+          <p>Projeto interativo que desafia os participantes a identificarem músicas.</p>
+          <a href="https://jucdreis.github.io/disney-musicas" target="_blank"><button>Saiba mais</button></a>
+        </div>
+        <div class="expo-item">
+          <img src="assets/hilocards.png" alt="Hilo Cards">
+          <h3>Hilo Cards </h3>
+          <p>Jogo de cartas estratégico (solo ou multiplayer) com decks de 20 cartas. Cada carta tem efeito e custo de energia. Jogadores começam com 40 pontos de vida e vencem ao zerar a do oponente..</p>
+          <a href="https://mlkhilo.github.io/hilo-cards/?fbclid=PAb21jcANKjh5leHRuA2FlbQIxMQABp8DnzI17LA4Y5rGiJSauopifNelmCSI-J9bEIezSnBdZ3Pnug-jXf_3ZiVDr_aem_lIrI5MazvrlS27ycsbkk_Q" target="_blank"><button>Saiba mais</button></a>
+        </div>
+        <div class="expo-item">
+          <img src="assets/temperamentando.jpg" alt="Teste de Temperamento">
+          <h3>Teste de Temperamento</h3>
+          <p>Uma ferramenta para descobrir o temperamento pessoal com base em respostas simples.</p>
+          <a href="https://matzhen.github.io/Projeto-FETEC/?classId=15c5af82-c6ca-48ee-960f-2c20cecbab59&assignmentId=dd9af1f4-26f9-4c8d-9b86-26625dc99a76&submissionId=8b2b52d0-3d57-bcb6-9c7d-f60b9ded146a" target="_blank"><button>Saiba mais</button></a>
+        </div>
+        <div class="expo-item">
+          <img src="assets/vocacional.jpg" alt="Teste Vocacional">
+          <h3>Teste Vocacional</h3>
+          <p>Descubra sua área de atuação com base em suas preferências.</p>
+          <a href="https://livcarsu.github.io/VocacaoPolar/" target="_blank"><button>Saiba mais</button></a>
+        </div>
+        <div class="expo-item">
+          <img src="assets/robotica.jpg" alt="Robótica">
+          <h3>Robótica</h3>
+          <p>Projeto de robótica com programação e construção de protótipos.</p>
+          <a href="https://fetecdarcy.github.io/roboticadje" target="_blank"><button>Saiba mais</button></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <p>&copy; 2025 <img src="assets/infotec.svg" alt="logo Infotec" class="logoM"> - Todos os direitos reservados.</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/etec.darcy.pereira.de.moraes.2025"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/etecdarcypereira?igsh=MWdubDEwOGNnMWJpcw=="><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
